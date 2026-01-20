@@ -1,0 +1,38 @@
+body {
+    background-color: lightpink;
+    color: white;
+    font-family:'Courier New', Courier, monospace
+}
+
+section {
+    margin: 65px 10px;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 50px;
+    text-align: center;
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    color:deeppink;
+    font-size: 36px;
+    font-weight: 100;
+}
+
+#Experience ul {
+    list-style: none;
+    padding: 0;
+}
+
+#Experience li {
+    background-color:palevioletred;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+a {
+    color: fuchsia;
+}
