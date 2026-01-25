@@ -2,11 +2,13 @@ body {
     background-color: lightpink;
     color: white;
     font-family:'Courier New', Courier, monospace
-}
+} /* Changes background, text color, and font */
 
 section {
     margin: 65px 10px;
 }
+
+/* TYPOGRAPHY */
 
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
@@ -21,18 +23,57 @@ h2 {
     font-weight: 100;
 }
 
+/* EXPERIENCE SECTION FLEXBOX LAYOUT*/
+
 #Experience ul {
     list-style: none;
     padding: 0;
-}
+} /* Remove list style */
 
-#Experience li {
+.exp {
     background-color:palevioletred;
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 8px;
 }
 
-a {
+/* Row layout title + date */
+.exp-header {
+    display: flex;
+}
+
+.exp-dates {
+    margin-left: auto;
+    font-style: italic;
+    font-size: 14px;
+} /* Pushes dates to the right */
+
+.exp-title {
+    font-weight: bold;
+    font-size: 18px;
+} /* Title stands out */
+
+.exp-description {
+    margin-top: 10px;
+    font-size: 14px;
+} /* Description below title + date */
+
+/* CONNECT SECTION USING FLEXBOX */
+
+.connect-links {
+    display: flex;
+}
+
+.connect-links a {
+    margin-right: 20px;
     color: fuchsia;
 }
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+} /* Remove bullets from navigation menu */
+
+
