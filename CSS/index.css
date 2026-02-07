@@ -1,25 +1,35 @@
+html {
+    font-size:16px;
+}
+
 body {
     background-color: lightpink;
     color: white;
-    font-family:'Courier New', Courier, monospace
+    font-family:'Courier New', Courier, monospace;
 } /* Changes background, text color, and font */
 
+/* ============================
+    DESKTOP STYLE(DEFAULT)
+  ============================== */
+
 section {
-    margin: 65px 10px;
-}
+    width: 90%;
+    max-width: 1100px;
+    margin: 4rem auto;
+} /* Add space between sections */
 
 /* TYPOGRAPHY */
 
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
-    font-size: 50px;
+    font-size: 3rem;
     text-align: center;
 }
 
 h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
     color:deeppink;
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 100;
 }
 
@@ -32,8 +42,8 @@ h2 {
 
 .exp {
     background-color:palevioletred;
-    padding: 15px;
-    margin-bottom: 15px;
+    padding: 1rem;
+    margin-bottom: 1rem;
     border-radius: 8px;
 }
 
@@ -62,10 +72,10 @@ h2 {
 
 .connect-links {
     display: flex;
+    gap: 1em;
 }
 
 .connect-links a {
-    margin-right: 20px;
     color: fuchsia;
 }
 
@@ -75,5 +85,46 @@ nav ul {
     padding: 0;
     margin: 0;
 } /* Remove bullets from navigation menu */
+
+
+/* ============================
+    TABLET STYLES
+  ============================== */
+
+  @media(max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;  /* change 1 */
+        color: hotpink;  /* change 2 */
+    }
+    .exp {
+        padding: 1.25rem;   /* change 1 */
+        background-color: pink;  /* change 2 */
+    }
+    .connect-links {
+        text-align: center;  /* change 1 */
+        gap: 30px;   /* change 2 */
+    }
+  } 
+
+/* ============================
+    MOBILE STYLES
+  ============================== */
+
+  @media(max-width: 480px) {
+    h1 {
+        font-size: 1.875rem;  /* change 1 */
+        text-align: left;  /* change 2 */
+        margin-left: 0.625rem;
+    }
+    .exp-header {
+        flex-direction: column;  /* change 1 */
+        gap: 5px;   /* change 2 */
+    }
+    nav ul {
+        display: flex;  /* change 1 */
+        flex-direction: column;  /* change 2 */
+        align-items: center;
+    }
+  }
 
 
