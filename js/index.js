@@ -17,8 +17,11 @@ const skills = [
     "JavaScript",
     "HTML",
     "CSS",
-    "Git & GitHub",
-    "DOM Manipulation"
+    "Git",
+    "GitHub",
+    "DOM Manipulation",
+    "Responsive Design",
+    "Flexbox"
 ];
 
 // SELECT SKILLS SECTION LIST
@@ -86,8 +89,27 @@ fetch("https://api.github.com/users/Zemeah/repos")
         let projectList = projectSection.querySelector("ul");
         
         for (let i = 0; i < repositories.length; i++) {
+           
+           if (repositories[i].fork === true) {
+            continue;
+           }
+
             let project = document.createElement("li");
-            project.innerText = repositories[i]["name"];
+           
+            let projectName = document.createElement("h3");
+            projectName.innerText = repositories[i].name;
+
+            let projectDescription = document.createElement("p");
+            projectDescription.innerText = repositories[i].description || "No description available.";
+
+            let projectLink = document.createElement("a");
+            projectLink.innerText = "View on GitHub";
+            projectLink.href = repositories[i].html_url;
+            projectLink.target = "_blank";
+
+            project.appendChild(projectName);
+            project.appendChild(projectDescription);
+            project.appendChild(projectLink);
             projectList.appendChild(project);
         }
     })
