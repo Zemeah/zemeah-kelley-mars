@@ -1,10 +1,12 @@
 html {
     font-size:16px;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: lightpink;
-    color: white;
+    margin: 0;
+    background-color: #f8e8ee;
+    color: #333;
     font-family:'Courier New', Courier, monospace;
 } /* Changes background, text color, and font */
 
@@ -28,9 +30,63 @@ h1 {
 
 h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
-    color:deeppink;
+    color:#333;
     font-size: 2.25rem;
     font-weight: 100;
+}
+
+/* NAVIGATION BAR */
+
+header {
+    background-color: palevioletred;
+    padding: 25px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    list-style:none;
+    padding: 0;
+    margin: 0;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color:deeppink;
+}
+
+/* HERO SECTION */
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+#hero img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero-text h1 {
+  margin: 0;
+}
+
+.hero-text p {
+  margin: 5px 0;
 }
 
 /* EXPERIENCE SECTION FLEXBOX LAYOUT*/
@@ -41,6 +97,7 @@ h2 {
 } /* Remove list style */
 
 .exp {
+    color: white;
     background-color:palevioletred;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -76,32 +133,38 @@ h2 {
 }
 
 .connect-links a {
-    color: fuchsia;
+    color: deeppink;
 }
 
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-} /* Remove bullets from navigation menu */
+.connect-links a:hover {
+    color: palevioletred
+}
 
 
 /* SKILLS SECTION */
 #skills ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
   list-style: none;
   padding: 0;
 }
 
 /* Individual skills */
 #skills li {
-  padding: 8px 14px;
+  padding: 10px 16px;
   background-color: palevioletred;
-  border-radius: 8px;
+  color: white;
+  border-radius: 20px;
   font-size: 14px;
+  transition: transform 0.2s, background-color 0.2s;
+
+}
+
+#skills li:hover {
+    transform: translateY(-4px);
+    background-color: deeppink;
 }
 
 /* MESSAGE SECTION */
@@ -164,19 +227,39 @@ form button:hover {
 
 #projects ul {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: wrap;
+    gap: 20px;
     list-style: none;
     padding: 0;
 }
 
 #projects li {
+    color: white;
     background-color: palevioletred;
-    padding: 8px 14px;
-    border-radius: 8px;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
-    width: fit-content;
-    margin: 6px 0;
+    width: 250px;
+}
+
+#projects h3 {
+    margin-top: 0;
+}
+
+#projects p {
+    font-size: 14px;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+#projects a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#projects a:hover {
+    color: deeppink;
 }
 
 
@@ -187,12 +270,10 @@ form button:hover {
 
   @media(max-width: 768px) {
     h1 {
-        font-size: 2.5rem; 
-        color: hotpink;  
+        font-size: 2.5rem;   
     }
     .exp {
-        padding: 1.25rem;   
-        background-color: pink;  
+        padding: 1.25rem;    
     }
     .connect-links {
         text-align: center;  
